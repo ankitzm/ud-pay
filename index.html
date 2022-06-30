@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UD Pay</title>
-</head>
-<body>
-    hello
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UD Pay</title>
+
+		<!-- styles -->
+		<link rel="stylesheet" href="/styles/home.css" />
+		<script src="/scripts/index.js"></script>
+
+		<!-- Metamask script -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	</head>
+
+	<body>
+		<div class="search">
+			<input type="text" name="name" id="name" />
+			<input list="list" name="domain" id="domain" />
+			<datalist id="list">
+				<option value="crypto"></option>
+				<option value="nft"></option>
+				<option value="x"></option>
+				<option value="wallet"></option>
+				<option value="bitcoin"></option>
+				<option value="dao"></option>
+				<option value="888"></option>
+				<option value="coin"></option>
+				<option value="zil"></option>
+				<option value="blockchain"></option>
+			</datalist>
+		</div>
+
+		<button class="resolve" onclick="resolveUD()">Resolve</button>
+
+		<div class="send">
+			<input id="eth" name="eth" type="number" value="0.001" />
+			<button id="pay" onclick="init()">Pay</button>
+		</div>
+
+		<table id="result">
+			<tr class="row">
+				<td>hello</td>
+				<td>hsdjk</td>
+			</tr>
+			<tr class="row">
+				<td>hello</td>
+				<td>hsdjk</td>
+			</tr>
+		</table>
+	</body>
+
+	<script src="https://unpkg.com/ethers@5.5.2/dist/ethers.umd.min.js"></script>
 </html>
