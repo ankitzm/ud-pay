@@ -1,10 +1,10 @@
 body,
 html {
-	min-height: 98vh;
+	min-height: 100vh;
     height: auto;
 	margin: 0;
 	padding: 0;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 200%);
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 body {
@@ -13,6 +13,19 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+.head {
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+img {
+    height: 50px;
+}
+
 
 .search {
 	display: flex;

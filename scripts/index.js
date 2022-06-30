@@ -1,5 +1,7 @@
+import { config } from "./config";
+
+const ALCHEMY_KEY = config.ALCHEMY_KEY
 const url = "https://unstoppabledomains.g.alchemy.com/domains/"
-const ALCHEMY_KEY = "CAbfzxTj9rZQ1MHItJm6V5opg7cf_CJu"
 
 // UD name resolver
 var udDomain;
