@@ -1,14 +1,16 @@
-const url = "https://unstoppabledomains.g.alchemy.com/domains/brad.crypto"
+const url = "https://unstoppabledomains.g.alchemy.com/domains/"
 const ALCHEMY_KEY = "CAbfzxTj9rZQ1MHItJm6V5opg7cf_CJu"
 
 // UD name resolver
+var udDomain;
+
 async function resolveUD() {
     const udName = document.getElementById("name").value
     const domain = document.getElementById("domain").value
-    const udDomain = udName + "." + domain
+    udDomain = udName + domain
 
     // if (udDomain == '' && domain == '') {
-    fetch(url, {
+    fetch(url + udDomain, {
         method: "GET",
         withCredentials: true,
         headers: {
@@ -18,9 +20,9 @@ async function resolveUD() {
     })
         .then(resp => resp.json())
         .then(function (data) {
-            // console.log(data);
+            console.log(data);
             // setTimeout(show(data), 2000)
-            show(data)
+            data.records === {} ? alert(`No record for ${udDomain}`) : show(data)
         })
         .catch(function (error) {
             console.log(error);
@@ -60,9 +62,16 @@ function show(data) {
         }
     }
 
-    // Setting innerHTML as tab variable
-    document.getElementById("result").style.display = "table"
-    document.getElementById("result").innerHTML = tab;
+    if (tab == "") {
+        alert(`No Crypto wallet connected to ${udDomain}`)
+    }
+    else {
+        // Setting innerHTML as tab variable
+        document.getElementById("result").style.display = "table"
+        document.getElementById("result").innerHTML = tab;
+        document.getElementById("send").style.display = "flex"
+    }
+
 }
 
 // Metamask
