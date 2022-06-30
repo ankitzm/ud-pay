@@ -1,9 +1,10 @@
 body,
 html {
-	height: 98vh;
+	min-height: 98vh;
+    height: auto;
 	margin: 0;
 	padding: 0;
-	border: 1px solid black;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 200%);
 }
 
 body {
@@ -23,18 +24,18 @@ input {
 	font-size: large;
 	width: 120px;
 	padding: 6px 10px;
-	border: 2px solid rgb(168, 168, 168);
+    background-color: #7e68b4b4;
+	border: 2px solid rgba(168, 168, 168, 0.168);
 }
 
 button {
 	appearance: none;
-	background-color: transparent;
+	background-color: rgba(240, 255, 255, 0.526);
 	box-sizing: border-box;
 	border: none;
 	color: #3b3b3b;
 	cursor: pointer;
 	display: inline-block;
-    background-color: #00000013;
 	font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 		"Segoe UI Symbol";
@@ -72,8 +73,9 @@ button:active {
 }
 
 .resolve {
-	border-radius: 15px;
+	border-radius: 10px;
 	border: 2px solid #1a1a1a;
+    width: 300px;
 }
 
 #name {
@@ -86,8 +88,8 @@ button:active {
 	text-align: left;
 }
 
-.send {
-	display: flex;
+#send {
+	display: none;
 	border: 3px solid black;
 	border-radius: 15px;
 	margin-top: 20px;
@@ -104,13 +106,13 @@ button#pay {
 	border-left: 2px solid black;
 	height: 100%;
 }
-/* table */
 
+/* table */
 table {
     display: none;
 	margin-top: 40px;
 	width: 300px;
-	border: 2px solid black;
+	border: 2px solid #7e68b447;
 }
 
 td {
@@ -118,10 +120,24 @@ td {
 	border-bottom: 1px solid #ddd;
 	padding: 15px 10px;
 	text-align: left;
-	max-width: 300px;
+	max-width: 200px;
     overflow-wrap: break-word;
 }
 
 tr:hover {
-	background-color: rgb(242, 242, 242);
+	background-color: #967cd78f;
+}
+
+
+/* responsiveness */
+@media only screen and (min-width: 600px) {
+    td {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    td {
+        max-width: 800px;
+    }
 }
