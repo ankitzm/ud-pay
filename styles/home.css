@@ -107,6 +107,7 @@ button#pay {
 /* table */
 
 table {
+    display: none;
 	margin-top: 40px;
 	width: 300px;
 	border: 2px solid black;
@@ -115,10 +116,10 @@ table {
 td {
 	border-bottom: 1px solid red;
 	border-bottom: 1px solid #ddd;
-	padding: 15px;
+	padding: 15px 10px;
 	text-align: left;
 	max-width: 300px;
-	overflow-x: auto;
+    overflow-wrap: break-word;
 }
 
 tr:hover {
