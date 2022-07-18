@@ -13,7 +13,7 @@ async function resolveUD() {
         method: "GET",
         withCredentials: true,
         headers: {
-            "Authorization": `Bearer ${ALCHEMY_KEY}`,
+            "Authorization": `Bearer ${process.env.ALCHEMY_KEY}`,
             "Content-Type": "application/json"
         }
     })
